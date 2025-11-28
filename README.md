@@ -13,7 +13,8 @@ The actual command used to render the svg to to png (note, this is Ubuntu - WSL 
 
 And the resulting .png, showing me that I need to tidy up the borders of each grid:  
 
-<img width="400" height="918" alt="image" src="https://github.com/user-attachments/assets/5f31e5c3-40a6-4980-9e56-aa703ba10d46" />
+<img width="400" height="918" alt="image" src="https://github.com/user-attachments/assets/5f31e5c3-40a6-4980-9e56-aa703ba10d46" />  
 
+<img width="600" height="1174" alt="image" src="https://github.com/user-attachments/assets/fb0b99e5-bca0-4bb2-b7d9-2444a593ddac" />
 
 
