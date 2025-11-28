@@ -1,0 +1,28 @@
+<svg width="240" height="270" viewBox="0 0 240 270" xmlns="http://www.w3.org/2000/svg">
+    <title>A grid</title>
+    <desc>
+      A simple SVG grid with a default white fill and black lines.
+      To add flexiblity, and therefore complexity, JavaScript,
+      CSS and HTML is likely needed.
+    </desc>
+    
+ <!-- A rectangle as background -->
+      <rect x="0" y="0" width="240" height="250" fill="white" />
+
+<!-- vertical lines -->
+      <line x1="20" y1="70" x2="20" y2="270" stroke="black" />
+      <line x1="60" y1="70" x2="60" y2="270" stroke="black"/>
+      <line x1="100" y1="70" x2="100" y2="270" stroke="black"/>
+      <line x1="140" y1="70" x2="140" y2="270" stroke="black"/>
+      <line x1="180" y1="70" x2="180" y2="270" stroke="black"/>
+      <line x1="220" y1="70" x2="220" y2="270" stroke="black"/>
+<!-- horizontal lines -->
+      <line x1="20" y1="70" x2="220" y2="70" stroke="black"/>
+      <line x1="20" y1="110" x2="220" y2="110" stroke="black"/>
+      <line x1="20" y1="150" x2="220" y2="150" stroke="black"/>
+      <line x1="20" y1="190" x2="220" y2="190" stroke="black"/>
+      <line x1="20" y1="230" x2="220" y2="230" stroke="black"/>
+      <line x1="20" y1="270" x2="220" y2="270" stroke="black"/>
+
+</svg>
+
