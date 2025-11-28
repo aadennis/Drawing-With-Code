@@ -1,0 +1,61 @@
+<svg width="720" height="870" viewBox="0 0 720 870"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     role="img"
+     aria-labelledby="pageTitle pageDesc"
+     preserveAspectRatio="xMidYMid meet">
+
+  <title id="pageTitle">Grid gallery — 2 by 3</title>
+  <desc id="pageDesc">Builds on svg02.svg - removes redundancies</desc>
+
+  <style>
+    .bg { fill:#ffffff; }
+    .grid-line { stroke:#000; stroke-width:1; stroke-linecap:square; }
+    .grid { shape-rendering:crispEdges; }
+  </style>
+
+  <!-- Shared basic line shapes (geometry only) -->
+  <defs>
+    <!-- vertical line positioned at x=0; place at different x with <use x="..."> -->
+    <line id="vline" x1="0" y1="70" x2="0" y2="220" class="grid-line"/>
+
+    <!-- horizontal line positioned at y=0; place at different y with <use y="..."> -->
+    <line id="hline" x1="20" y1="0" x2="260" y2="0" class="grid-line"/>
+  </defs>
+
+  <!-- Define grid once, using shared lines -->
+  <symbol id="grid-template" viewBox="0 0 240 270" width="240" height="270" preserveAspectRatio="xMidYMid meet">
+    <rect class="bg" x="0" y="0" width="260" height="270" />
+    <g class="grid" aria-hidden="true">
+      <!-- vertical lines (reuse vline at different x positions) -->
+      <use href="#vline" x="20"/>
+      <use href="#vline" x="80"/> 
+      <use href="#vline" x="140"/>
+      <use href="#vline" x="200"/>
+      <use href="#vline" x="260"/>
+      <use href="#vline" x="320"/>
+
+      <!-- horizontal lines (reuse hline at different y positions) -->
+      <use href="#hline" y="70"/>
+      <use href="#hline" y="100"/>
+      <use href="#hline" y="130"/>
+      <use href="#hline" y="160"/>
+      <use href="#hline" y="190"/>
+      <use href="#hline" y="220"/>
+    </g>
+  </symbol>
+
+  <!-- Place six copies explicitly; width/height on each <use> prevents inconsistent rendering -->
+  <g id="gallery">
+    <use href="#grid-template" x="0"   y="0"   width="270" height="270" />
+    <use href="#grid-template" x="260" y="0"   width="270" height="270" />
+
+    <use href="#grid-template" x="280"   y="290" width="270" height="270" />
+    <use href="#grid-template" x="760" y="290" width="270" height="270" />
+
+    <use href="#grid-template" x="0"   y="580" width="270" height="270" />
+    <use href="#grid-template" x="260" y="580" width="270" height="270" />
+  </g>
+
+</svg>
+
