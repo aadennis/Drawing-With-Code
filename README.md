@@ -1,4 +1,7 @@
 # Drawing-With-Code
+#### credit to MDN for the tutorial:  
+ `https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths`  
+
 Firstly, using svg to draw a template for tablature on a guitar fretboard. 
 
 ## Rendering from svg into png
