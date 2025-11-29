@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- play3.svg: SVG boilerplate -->
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="800" height="600"
+    viewBox="0 0 800 600"
+    role="img"
+    aria-labelledby="title desc"
+    preserveAspectRatio="xMidYMid meet">
+
+    <title id="title">Play3 sample SVG</title>
+    <desc id="desc">Boilerplate with defs, styles, basic shapes, and accessibility attributes.</desc>
+
+    <defs>
+        <!-- simple linear gradient -->
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4facfe"/>
+            <stop offset="100%" stop-color="#00f2fe"/>
+        </linearGradient>
+
+        <!-- subtle grid pattern -->
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M40 0 L0 0 0 40" fill="none" stroke="#ffffff22" stroke-width="1"/>
+        </pattern>
+
+        <!-- reusable icon -->
+        <symbol id="play-icon" viewBox="0 0 24 24">
+            <path d="M4 2v20l18-10L4 2z" fill="currentColor"/>
+        </symbol>
+    </defs>
+
+    <style>
+        /* Embedded CSS for quick tweaks */
+        :root { --bg: #0f1723; --fg: #e6eef8; --muted: #b6c7d9; }
+        svg { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+        .bg { fill: var(--bg); }
+        .panel { fill: url(#grad); stroke: #00000022; stroke-width: 1; }
+        .overlay-grid { fill: url(#grid); opacity: 0.08; }
+        .accent { fill: #ffdd57; }
+        .label { fill: var(--fg); font-size: 18px; font-weight: 600; }
+        .muted { fill: var(--muted); font-size: 13px; }
+    </style>
+
+    <!-- background -->
+    <rect class="bg" x="0" y="0" width="100%" height="100%"/>
+
+    <!-- decorative panel with gradient -->
+    <g transform="translate(80,60)">
+        <rect class="panel" x="0" y="0" width="640" height="420" rx="14" ry="14"/>
+        <rect class="overlay-grid" x="0" y="0" width="640" height="420" rx="14" ry="14"/>
+
+        <!-- heading -->
+        <text class="label" x="32" y="48">SVG Boilerplate</text>
+        <text class="muted" x="32" y="72">ViewBox: 0 0 800 600 — Responsive canvas</text>
+
+        <!-- example circle and icon -->
+        <g transform="translate(480,220)">
+            <circle cx="0" cy="0" r="60" class="accent" />
+            <use href="#play-icon" x="-14" y="-18" width="28" height="36" fill="#222"/>
+        </g>
+
+        <!-- sample shapes -->
+        <rect x="32" y="120" width="220" height="120" rx="8" fill="#ffffff12" stroke="#ffffff22"/>
+        <circle cx="180" cy="200" r="28" fill="#ffffff22" stroke="#ffffff33"/>
+
+        <!-- sample path -->
+        <path d="M32 270 C120 230, 220 330, 320 290" fill="none" stroke="#ffffff66" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- small footer -->
+    <text x="16" y="590" class="muted">Generated: play3.svg</text>
+</svg>
