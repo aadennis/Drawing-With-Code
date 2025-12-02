@@ -1,0 +1,177 @@
+{
+  "Circle primitive": {
+    "prefix": "circlefull",
+    "body": [
+      "<circle cx=\"50\" cy=\"50\" r=\"24\" />"
+    ],
+    "description": "SVG circle with default attributes"
+  },
+  "Rectangle primitive": {
+    "prefix": "rectfull",
+    "body": [
+      "<rect x=\"0\" y=\"0\" width=\"100\" height=\"50\" />"
+    ],
+    "description": "SVG rectangle"
+  },
+  "Line primitive": {
+    "prefix": "linefull",
+    "body": [
+      "<line x1=\"0\" y1=\"0\" x2=\"100\" y2=\"100\" />"
+    ],
+    "description": "SVG line"
+  },
+  "Path primitive": {
+    "prefix": "pathfull",
+    "body": [
+      "<path d=\"M10 10 H 90 V 90 H 10 Z\" />"
+    ],
+    "description": "SVG path"
+  },
+  "Text primitive": {
+    "prefix": "textfull",
+    "body": [
+      "<text x=\"10\" y=\"20\">Sample</text>"
+    ],
+    "description": "SVG text element"
+  },
+  "Polygon primitive": {
+    "prefix": "polygonfull",
+    "body": [
+      "<polygon points=\"50,5 100,100 0,100\" />"
+    ],
+    "description": "SVG polygon"
+  },
+  "Polyline primitive": {
+    "prefix": "polylinefull",
+    "body": [
+      "<polyline points=\"0,0 50,25 50,75 100,100\" />"
+    ],
+    "description": "SVG polyline"
+  },
+  "Ellipse primitive": {
+    "prefix": "ellipsefull",
+    "body": [
+      "<ellipse cx=\"50\" cy=\"50\" rx=\"25\" ry=\"15\" />"
+    ],
+    "description": "SVG ellipse"
+  },
+  "Group element": {
+    "prefix": "groupfull",
+    "body": [
+      "<g>",
+      "  $0",
+      "</g>"
+    ],
+    "description": "SVG group wrapper"
+  },
+  "Defs block": {
+    "prefix": "defsfull",
+    "body": [
+      "<defs>",
+      "  <style>",
+      "    <![CDATA[",
+      "      /* CSS here */",
+      "    ]]>",
+      "  </style>",
+      "</defs>"
+    ],
+    "description": "SVG defs block with embedded style"
+  },
+  "Defs gradient": {
+    "prefix": "defsgra",
+    "body": [
+      "<defs>",
+      "  <linearGradient id=\"grad1\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\">",
+      "    <stop offset=\"0%\" style=\"stop-color:rgb(255,255,0);stop-opacity:1\" />",
+      "    <stop offset=\"100%\" style=\"stop-color:rgb(255,0,0);stop-opacity:1\" />",
+      "  </linearGradient>",
+      "</defs>"
+    ],
+    "description": "SVG linear gradient inside defs"
+  },
+  "Symbol definition": {
+    "prefix": "symbolfull",
+    "body": [
+      "<symbol id=\"icon-star\" viewBox=\"0 0 24 24\">",
+      "  <path d=\"M12 2 L15 9 H22 L17 14 L19 21 L12 17 L5 21 L7 14 L2 9 H9 Z\" />",
+      "</symbol>"
+    ],
+    "description": "Reusable symbol definition"
+  },
+  "Use symbol": {
+    "prefix": "usefull",
+    "body": [
+      "<use href=\"#icon-star\" x=\"0\" y=\"0\" width=\"24\" height=\"24\" />"
+    ],
+    "description": "Reference a defined symbol"
+  },
+  "ClipPath definition": {
+    "prefix": "clipfull",
+    "body": [
+      "<clipPath id=\"clip1\">",
+      "  <circle cx=\"50\" cy=\"50\" r=\"40\" />",
+      "</clipPath>"
+    ],
+    "description": "Reusable clipPath definition"
+  },
+  "Mask definition": {
+    "prefix": "maskfull",
+    "body": [
+      "<mask id=\"mask1\">",
+      "  <rect x=\"0\" y=\"0\" width=\"100\" height=\"100\" fill=\"white\" />",
+      "  <circle cx=\"50\" cy=\"50\" r=\"40\" fill=\"black\" />",
+      "</mask>"
+    ],
+    "description": "Reusable mask definition"
+  },
+  "Pattern definition": {
+    "prefix": "patternfull",
+    "body": [
+      "<pattern id=\"pattern1\" patternUnits=\"userSpaceOnUse\" width=\"10\" height=\"10\">",
+      "  <rect width=\"10\" height=\"10\" fill=\"white\" />",
+      "  <circle cx=\"5\" cy=\"5\" r=\"3\" fill=\"lightgray\" />",
+      "</pattern>"
+    ],
+    "description": "Reusable pattern for fills"
+  },
+  "Filter definition": {
+    "prefix": "filterfull",
+    "body": [
+      "<filter id=\"blurFilter\" x=\"0\" y=\"0\" width=\"200%\" height=\"200%\">",
+      "  <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"5\" />",
+      "</filter>"
+    ],
+    "description": "Reusable filter (Gaussian blur)"
+  },
+  "Marker definition": {
+    "prefix": "markerfull",
+    "body": [
+      "<marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\"",
+      "    orient=\"auto\" markerUnits=\"strokeWidth\">",
+      "  <path d=\"M0,0 L10,3.5 L0,7 Z\" fill=\"black\" />",
+      "</marker>"
+    ],
+    "description": "Reusable marker (arrowhead)"
+  },
+  "Use marker": {
+    "prefix": "usemarker",
+    "body": [
+      "<line x1=\"10\" y1=\"10\" x2=\"100\" y2=\"100\"",
+      "    stroke=\"black\" stroke-width=\"2\"",
+      "    marker-end=\"url(#arrowhead)\" />"
+    ],
+    "description": "Line using a defined marker"
+  },
+  "SVG root element": {
+    "prefix": "svgfull",
+    "body": [
+      "<svg xmlns=\"http://www.w3.org/2000/svg\"",
+      "     width=\"${1:200}\" height=\"${2:200}\"",
+      "     viewBox=\"0 0 ${1:200} ${2:200}\"",
+      "     version=\"1.1\">",
+      "  $0",
+      "</svg>"
+    ],
+    "description": "SVG root element with width, height, and viewBox"
+  }
+}
