@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive SVG ViewBox Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    .controls {
+      margin-bottom: 20px;
+    }
+    label {
+      display: inline-block;
+      width: 120px;
+    }
+    input[type=range] {
+      width: 300px;
+    }
+    .svg-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    svg {
+      border: 1px solid black;
+      background: #f9f9f9;
+    }
+    .status {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 10px;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Interactive SVG ViewBox Scaling</h2>
+
+  <div class="controls">
+    <div>
+      <label for="vbWidth">ViewBox Width:</label>
+      <input type="range" id="vbWidth" min="100" max="600" value="240">
+      <span id="vbWidthValue">240</span>
+    </div>
+    <div>
+      <label for="vbHeight">ViewBox Height:</label>
+      <input type="range" id="vbHeight" min="100" max="600" value="280">
+      <span id="vbHeightValue">280</span>
+    </div>
+    <div class="status">
+      Zoom: <span id="zoomPercent">100%</span>
+    </div>
+    <button id="resetBtn">Reset to Baseline</button>
+  </div>
+
+  <div class="svg-container">
+    <svg id="demoSVG" width="240" height="280" viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="240" height="280" fill="red"/>
+      <circle cx="120" cy="140" r="60" fill="yellow" stroke="black" stroke-width="4"/>
+      <text x="10" y="20" font-size="16" fill="white">Drag sliders to adjust viewBox</text>
+    </svg>
+  </div>
+
+  <script>
+    const vbWidthSlider = document.getElementById('vbWidth');
+    const vbHeightSlider = document.getElementById('vbHeight');
+    const vbWidthValue = document.getElementById('vbWidthValue');
+    const vbHeightValue = document.getElementById('vbHeightValue');
+    const demoSVG = document.getElementById('demoSVG');
+    const zoomPercent = document.getElementById('zoomPercent');
+    const resetBtn = document.getElementById('resetBtn');
+
+    const baselineWidth = 240;
+    const baselineHeight = 280;
+
+    function updateViewBox() {
+      const w = parseInt(vbWidthSlider.value, 10);
+      const h = parseInt(vbHeightSlider.value, 10);
+      vbWidthValue.textContent = w;
+      vbHeightValue.textContent = h;
+      demoSVG.setAttribute('viewBox', `0 0 ${w} ${h}`);
+
+      // Calculate zoom percentage relative to baseline
+      const zoomW = baselineWidth / w;
+      const zoomH = baselineHeight / h;
+      const zoom = ((zoomW + zoomH) / 2) * 100;
+      zoomPercent.textContent = zoom.toFixed(0) + "%";
+    }
+
+    function resetViewBox() {
+      vbWidthSlider.value = baselineWidth;
+      vbHeightSlider.value = baselineHeight;
+      updateViewBox();
+    }
+
+    vbWidthSlider.addEventListener('input', updateViewBox);
+    vbHeightSlider.addEventListener('input', updateViewBox);
+    resetBtn.addEventListener('click', resetViewBox);
+
+    // Initialize
+    updateViewBox();
+  </script>
+</body>
+</html>

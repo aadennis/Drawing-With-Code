@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive SVG ViewBox Demo</title>
+  <link rel="stylesheet" href="flexbox_demo03-5.css">
+</head>
+<body>
+  <h2>Interactive SVG ViewBox Scaling</h2>
+
+  <div class="controls">
+    <!-- Toggle switch -->
+    <div>
+      <label for="modeToggle">Mode:</label>
+      <select id="modeToggle">
+        <option value="independent">Independent</option>
+        <option value="uniform">Uniform</option>
+      </select>
+    </div>
+
+    <!-- Independent sliders -->
+    <div id="independentControls">
+      <div>
+        <label for="vbWidth">ViewBox Width:</label>
+        <input type="range" id="vbWidth" min="100" max="600" value="240">
+        <span id="vbWidthValue">240</span>
+      </div>
+      <div>
+        <label for="vbHeight">ViewBox Height:</label>
+        <input type="range" id="vbHeight" min="100" max="600" value="280">
+        <span id="vbHeightValue">280</span>
+      </div>
+    </div>
+
+    <!-- Uniform zoom slider -->
+    <div id="uniformControls" style="display:none;">
+      <div>
+        <label for="zoomSlider">Uniform Zoom:</label>
+        <input type="range" id="zoomSlider" min="50" max="200" value="100">
+        <span id="zoomSliderValue">100%</span>
+      </div>
+    </div>
+
+    <div class="status">
+      Zoom: <span id="zoomPercent">100%</span>
+    </div>
+    <button id="resetBtn">Reset to Baseline</button>
+  </div>
+
+  <div class="svg-container">
+    <svg id="demoSVG" width="240" height="280" viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="240" height="280" fill="red"/>
+      <circle cx="120" cy="140" r="60" fill="yellow" stroke="black" stroke-width="4"/>
+      <text x="10" y="20" font-size="16" fill="white">Adjust sliders to zoom</text>
+    </svg>
+  </div>
+
+  <!-- Live preview of current viewBox -->
+  <div class="viewbox-preview">
+    Current viewBox: <code id="viewBoxString">0 0 240 280</code>
+    <button id="copyBtn">Copy</button>
+  </div>
+
+  <script src="flexbox_demo03-5.js"></script>
+</body>
+</html>

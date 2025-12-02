@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SVG ViewBox Progression Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    .container {
+      display: flex;
+      gap: 20px; /* space between SVGs */
+      justify-content: center;
+      align-items: flex-start;
+    }
+    svg {
+      border: 1px solid black;
+      background: #f9f9f9;
+    }
+    .label {
+      text-align: center;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>SVG ViewBox Scaling Progression</h2>
+  <div class="container">
+    <!-- Step 1: Baseline -->
+    <div class="item">
+      <svg width="240" height="280" viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="240" height="280" fill="red"/>
+        <text x="10" y="20" font-size="16" fill="white">Baseline</text>
+      </svg>
+      <div class="label">viewBox 240×280</div>
+    </div>
+
+    <!-- Step 2: Zoomed Out -->
+    <div class="item">
+      <svg width="240" height="280" viewBox="0 0 480 560" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="240" height="280" fill="blue"/>
+        <text x="10" y="20" font-size="16" fill="white">Zoomed Out</text>
+      </svg>
+      <div class="label">viewBox 480×560</div>
+    </div>
+
+    <!-- Step 3: Zoomed In -->
+    <div class="item">
+      <svg width="240" height="280" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="240" height="280" fill="green"/>
+        <text x="10" y="20" font-size="16" fill="white">Zoomed In</text>
+      </svg>
+      <div class="label">viewBox 120×140</div>
+    </div>
+  </div>
+</body>
+</html>
