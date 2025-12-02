@@ -1,13 +1,13 @@
-<svg width="240" height="270" viewBox="0 0 240 270" xmlns="http://www.w3.org/2000/svg">
-    <title>A grid</title>
+<svg width="240" height="280" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+    <title>A grid with a green background</title>
     <desc>
-      A simple SVG grid with a default white fill and black lines.
+      A simple SVG grid with a green fill and black lines.
       To add flexiblity, and therefore complexity, JavaScript,
       CSS and HTML is likely needed.
     </desc>
     
  <!-- A rectangle as background -->
-      <rect x="0" y="0" width="240" height="250" fill="white" />
+      <rect x="0" y="0" width="240" height="280" fill="green" />
 
 <!-- vertical lines -->
       <line x1="20" y1="70" x2="20" y2="270" stroke="black" />
