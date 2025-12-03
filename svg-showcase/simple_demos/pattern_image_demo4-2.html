@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>SVG pattern - image </h2>
+    <svg width="450" height="220" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <!-- Absolute pixel-based pattern -->
+            <pattern id="dotsUserSpace" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="10" cy="10" r="5" fill="black" />
+            </pattern>
+
+            <!-- Relative bounding-box-based pattern -->
+            <pattern id="dotsObjectBox" x="0" y="0" width="0.1" height="0.1" patternUnits="objectBoundingBox">
+                <circle cx="0.5" cy="0.5" r="0.25" fill="black" />
+            </pattern>
+        </defs>
+
+        <!-- Left rectangle: userSpaceOnUse -->
+        <rect x="0" y="0" width="200" height="200" fill="url(#dotsUserSpace)" stroke="gray" />
+        <text x="50" y="215" font-size="12" fill="black">userSpaceOnUse (absolute px)</text>
+
+        <!-- Right rectangle: objectBoundingBox -->
+        <rect x="230" y="0" width="200" height="200" fill="url(#dotsObjectBox)" stroke="gray" />
+        <text x="260" y="215" font-size="12" fill="black">objectBoundingBox (relative %)</text>
+    </svg>
+
+</body>
+
+</html>

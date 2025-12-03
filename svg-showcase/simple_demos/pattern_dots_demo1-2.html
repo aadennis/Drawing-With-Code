@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>SVG pattern - dotsx 2</h2>
+<svg width="420" height="220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dot pattern: fixed 20x20 tile -->
+    <pattern id="dots"
+             x="0" y="0"
+             width="20" height="20"
+             patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="5" fill="black" />
+    </pattern>
+  </defs>
+
+  <!-- Diagnostic rectangle filled with dots -->
+  <rect x="0" y="0" width="400" height="200" fill="url(#dots)" stroke="gray" />
+
+  <!-- Guide lines to count dots -->
+  <line x1="200" y1="0" x2="200" y2="200" stroke="red" stroke-width="2" />
+  <line x1="400" y1="0" x2="400" y2="200" stroke="blue" stroke-width="2" />
+
+  <!-- Labels -->
+  <text x="190" y="15" font-size="12" fill="red">200px</text>
+  <text x="390" y="15" font-size="12" fill="blue">400px</text>
+</svg>
+
+</body>
+
+</html>
