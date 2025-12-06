@@ -1,37 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="2480" height="3508">
-  <defs>
-    <style>
-      .minor { stroke: #000000; stroke-opacity: 0.5; stroke-width: 1; }
-      .major { stroke: #000000; stroke-opacity: 0.85; stroke-width: 2; }
-    </style>
+  <style>
+    .minor { stroke: #000000; stroke-opacity: 0.5; stroke-width: 1; }
+    .major { stroke: #000000; stroke-opacity: 0.85; stroke-width: 2; }
+  </style>
 
-    <!-- Horizontal minor lines: CELL = 64 -->
-    <pattern id="hMinor" width="100%" height="64" patternUnits="userSpaceOnUse">
-      <path d="M 0 64 H 100%" fill="none"/>
-    </pattern>
+  <!-- Vertical lines -->
+  <!-- Minor every 64 px, major every 512 px -->
+  <!-- Example: draw a few manually -->
+  <line x1="64" y1="0" x2="64" y2="3508" class="minor"/>
+  <line x1="128" y1="0" x2="128" y2="3508" class="minor"/>
+  <line x1="512" y1="0" x2="512" y2="3508" class="major"/>
+  <!-- …repeat until width is covered -->
 
-    <!-- Horizontal major lines: CELL × H_FACTOR = 256 -->
-    <pattern id="hMajor" width="100%" height="256" patternUnits="userSpaceOnUse">
-      <path d="M 0 256 H 100%" fill="none"/>
-    </pattern>
-
-    <!-- Vertical minor lines: CELL = 64 -->
-    <pattern id="vMinor" width="64" height="100%" patternUnits="userSpaceOnUse">
-      <path d="M 64 0 V 100%" fill="none"/>
-    </pattern>
-
-    <!-- Vertical major lines: CELL × V_FACTOR = 512 -->
-    <pattern id="vMajor" width="512" height="100%" patternUnits="userSpaceOnUse">
-      <path d="M 512 0 V 100%" fill="none"/>
-    </pattern>
-  </defs>
-
-  <!-- Transparent background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="none"/>
-
-  <!-- Apply grids -->
-  <rect x="0" y="0" width="100%" height="100%" fill="url(#hMinor)" class="minor"/>
-  <rect x="0" y="0" width="100%" height="100%" fill="url(#hMajor)" class="major"/>
-  <rect x="0" y="0" width="100%" height="100%" fill="url(#vMinor)" class="minor"/>
-  <rect x="0" y="0" width="100%" height="100%" fill="url(#vMajor)" class="major"/>
+  <!-- Horizontal lines -->
+  <!-- Minor every 32 px, major every 256 px -->
+  <line x1="0" y1="32" x2="2480" y2="32" class="minor"/>
+  <line x1="0" y1="64" x2="2480" y2="64" class="minor"/>
+  <line x1="0" y1="256" x2="2480" y2="256" class="major"/>
+  <!-- …repeat until height is covered -->
 </svg>
+

@@ -1,5 +1,5 @@
 <!-- Parametric grid: set width/height, cell size, line colors, and thickness -->
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080">
+<svg xmlns="http://www.w3.org/2000/svg" width="2480" height="3508">
   <!-- Config -->
   <!-- cell: base cell size; thickEvery: bold every N cells; tweak stroke widths and colors -->
   <defs>
@@ -27,7 +27,7 @@
         <path d="M 64 0 L 0 0 0 64" fill="none"/>
       </pattern>
     </defs>
-    <rect x="0" y="0" width="1920" height="1080" fill="url(#pThin)"/>
+    <rect x="0" y="0" width="2480" height="3508" fill="url(#pThin)"/>
   </g>
 
   <!-- Thick lines every N cells -->
@@ -41,6 +41,6 @@
         <path d="M 0 0 L 512 0" fill="none"/>
       </pattern>
     </defs>
-    <rect x="0" y="0" width="1920" height="1080" fill="url(#pThick)"/>
+    <rect x="0" y="0" width="2480" height="3508" fill="url(#pThick)"/>
   </g>
 </svg>
