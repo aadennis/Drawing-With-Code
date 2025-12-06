@@ -2,10 +2,10 @@
 # After generation, paste into stacked_text_01.svg
 rows = 6
 x = 20
-width = 80
-height = 50
+width = 60
+height = 40
 y_start = 20
-y_step = 54  # increment between rows
+y_step = 44  # increment between rows
 
 labels = ["1/E", "2/B", "3/G", "4/D", "5/A", "6/E"]
 
