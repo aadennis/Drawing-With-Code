@@ -18,5 +18,5 @@
   <text class="label" x="60" y="263">5/A</text>
   <rect class="box" x="20" y="290" width="80" height="50"/>
   <text class="label" x="60" y="317">6/E</text>
-<!-- codegen inject end -->  
+<!-- codegen inject end -->
 </svg>

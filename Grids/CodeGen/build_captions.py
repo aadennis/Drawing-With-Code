@@ -9,8 +9,10 @@ y_step = 54  # increment between rows
 
 labels = ["1/E", "2/B", "3/G", "4/D", "5/A", "6/E"]
 
+print(f'<!-- codegen inject start -->')
 for i in range(rows):
     y = y_start + i * y_step
     text_y = y + height // 2 + 2  # center vertically; tweak offset if needed
     print(f'  <rect class="box" x="{x}" y="{y}" width="{width}" height="{height}"/>')
     print(f'  <text class="label" x="{x + width//2}" y="{text_y}">{labels[i]}</text>')
+print(f'<!-- codegen inject end -->')    
