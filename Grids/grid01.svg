@@ -1,0 +1,46 @@
+<!-- Parametric grid: set width/height, cell size, line colors, and thickness -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080">
+  <!-- Config -->
+  <!-- cell: base cell size; thickEvery: bold every N cells; tweak stroke widths and colors -->
+  <defs>
+    <style>
+      .thin { stroke: #000000; stroke-opacity: 0.55; stroke-width: 1; }
+      .thick { stroke: #000000; stroke-opacity: 0.85; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- Background transparent -->
+  <rect x="0" y="0" width="100%" height="100%" fill="none"/>
+
+  <!-- Parameters (edit these numbers) -->
+  <!-- cell = 64 px; thickEvery = 8 cells -->
+  <!-- width = 1920; height = 1080 -->
+  <!-- Thin lines -->
+  <g id="thin-grid" class="thin">
+    <!-- Vertical thin lines -->
+    <!-- Draw lines every 'cell' px across width -->
+    <!-- Replace 64 with your cell size -->
+    <!-- Quick generator: copy-paste more lines or use an editor to duplicate -->
+    <!-- For clarity, here’s a compact pattern using SVG patterns -->
+    <defs>
+      <pattern id="pThin" width="64" height="64" patternUnits="userSpaceOnUse">
+        <path d="M 64 0 L 0 0 0 64" fill="none"/>
+      </pattern>
+    </defs>
+    <rect x="0" y="0" width="1920" height="1080" fill="url(#pThin)"/>
+  </g>
+
+  <!-- Thick lines every N cells -->
+  <g id="thick-grid" class="thick">
+    <!-- Vertical thick lines -->
+    <!-- Draw at multiples of (cell * thickEvery) -->
+    <!-- For 64 px cell and every 8 cells: spacing = 512 -->
+    <defs>
+      <pattern id="pThick" width="512" height="512" patternUnits="userSpaceOnUse">
+        <path d="M 0 0 L 0 512" fill="none"/>
+        <path d="M 0 0 L 512 0" fill="none"/>
+      </pattern>
+    </defs>
+    <rect x="0" y="0" width="1920" height="1080" fill="url(#pThick)"/>
+  </g>
+</svg>
