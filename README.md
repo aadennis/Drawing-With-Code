@@ -46,7 +46,7 @@ The next MDN page I selected expands to include polygon, polyline, and path elem
 
 ## Some simple examples
 
-Take a look [here](examples_101.md)
+Take a look [here](Docs/examples_101.md)
 
 Assume that all examples are wrapped in this:
 ```svg
