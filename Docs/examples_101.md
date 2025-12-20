@@ -1,4 +1,4 @@
-## Some 101 examples
+## SVG: Some simple examples
 
 Assume that all examples are wrapped in this:
 ```svg
@@ -46,3 +46,4 @@ The `green fill` happens here, because the line resolves to a triangle, thank to
 
 
 <hr>
+
