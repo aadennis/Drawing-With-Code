@@ -48,10 +48,11 @@ The next MDN page I selected expands to include polygon, polyline, and path elem
 
 Take a look [here](Docs/examples_101.md)
 
-
 <hr>
 
 ## Remembering snippets
+
+Take a look [here](Docs/snippets.md)
 
 Well, you can't remember them all. Here is a list for plugging into VSCode. The unimaginative '...full' at the end of each prefix is to prevent conflict with the SVG reserved words. 
 
