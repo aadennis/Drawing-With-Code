@@ -44,7 +44,9 @@ The next MDN page I selected expands to include polygon, polyline, and path elem
 </svg>
 ```
 
-## Some 101 examples
+## Some simple examples
+
+Take a look [here]()
 
 Assume that all examples are wrapped in this:
 ```svg
