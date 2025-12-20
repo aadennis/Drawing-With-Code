@@ -1,6 +1,8 @@
 # Drawing-With-Code
 
-If you are drawing with code, then in a browser, that probably means <b>SVG</b>. It does here, anyway.
+If you are drawing with code, and then want to see that drawing in a browser, that often means <b>SVG</b>. It does here, anyway.
+
+## Drawing with SVG
 
 [MDN: Credit for the tutorial on SVG Paths](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)   
 
