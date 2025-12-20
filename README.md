@@ -1,8 +1,10 @@
 # Drawing-With-Code
-#### credit to MDN for the tutorial:  
- `https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths`  
 
-Firstly, using svg to draw a template for tablature on a guitar fretboard. 
+If you are drawing with code, then in a browser, that probably means <b>SVG</b>. It does here, anyway.
+
+[MDN: Credit for the tutorial on SVG Paths](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)   
+
+Firstly, I use svg to draw a template for tablature on a guitar fretboard. 
 
 ## Rendering from svg into png
 Having tried Inkscape, and a couple of other methods, the absolutely best solution for rendering from svg into png is the linux utility `rsvg-convert`.  
