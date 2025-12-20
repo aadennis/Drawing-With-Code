@@ -6,6 +6,9 @@ If you are drawing with code, and then want to see that drawing in a browser, th
 
 [MDN: Credit for the tutorial on SVG Paths](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)   
 
+MDN is simply the place to go. 
+This MDN pages shows simple boilerplate for a rectangle, a circle, and some text:   
+(https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)   
 Firstly, I use svg to draw a template for tablature on a guitar fretboard. 
 
 ## Rendering from svg into png
