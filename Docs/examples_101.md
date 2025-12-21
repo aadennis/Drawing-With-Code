@@ -1,6 +1,6 @@
 ## SVG: Some simple examples
 
-Assume that all examples are wrapped in this:
+To execute the examples, wrap them in this snippet - see `# example here`
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg"
      width="200" height="200"
@@ -46,4 +46,5 @@ The `green fill` happens here, because the line resolves to a triangle, thank to
 
 
 <hr>
+
 
