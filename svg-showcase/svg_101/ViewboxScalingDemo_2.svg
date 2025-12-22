@@ -1,0 +1,51 @@
+<div style="display:flex; gap:20px;">
+  <!-- Case 1: viewBox matches width -->
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="400" height="200"
+       viewBox="0 0 400 200"
+       style="border:1px solid gray">
+    <!-- Background rectangle showing full width -->
+    <rect x="0" y="0" width="400" height="200"
+          fill="none" stroke="lightblue" stroke-dasharray="4" />
+    <!-- Line that spans full width -->
+    <line x1="0" y1="60" x2="400" y2="60"
+          stroke="black" stroke-width="2" />
+    <!-- Second line also spans full width -->
+    <line x1="0" y1="140" x2="400" y2="140"
+          stroke="red" stroke-width="2" />
+    <!-- Arrow showing line end -->
+    <line x1="400" y1="60" x2="380" y2="40"
+          stroke="green" marker-end="url(#arrow)" />
+    <text x="10" y="20" font-size="16">viewBox 400</text>
+  </svg>
+
+  <!-- Case 2: viewBox wider than width -->
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="400" height="200"
+       viewBox="0 0 800 200"
+       style="border:1px solid gray">
+    <!-- Background rectangle showing full width of viewBox -->
+    <rect x="0" y="0" width="800" height="200"
+          fill="none" stroke="lightblue" stroke-dasharray="4" />
+    <!-- Line only half width (400 units out of 800) -->
+    <line x1="0" y1="60" x2="400" y2="60"
+          stroke="black" stroke-width="2" />
+    <!-- Second line spans full width (800 units) -->
+    <line x1="0" y1="140" x2="800" y2="140"
+          stroke="red" stroke-width="2" />
+    <!-- Arrow showing black line end -->
+    <line x1="400" y1="60" x2="380" y2="40"
+          stroke="green" marker-end="url(#arrow)" />
+    <text x="10" y="20" font-size="16">viewBox 800</text>
+  </svg>
+
+  <!-- Arrow definition -->
+  <svg width="0" height="0">
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10"
+              refX="5" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 Z" fill="green" />
+      </marker>
+    </defs>
+  </svg>
+</div>

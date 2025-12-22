@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .block-container svg {
+      display:inline-block;   /* normal inline-block flow */
+      margin-right:20px;
+    }
+    .flex-container {
+      display:flex;           /* flexbox row layout */
+      gap:20px;
+      flex-wrap:wrap;         /* allow wrapping when narrow */
+    }
+    svg {
+      border:1px solid gray;
+    }
+  </style>
+</head>
+<body>
+
+<h3>Block layout (inline-block)</h3>
+<div class="block-container">
+  <svg width="200" height="100" viewBox="0 0 200 100">
+    <rect x="0" y="0" width="200" height="100" fill="lightblue"/>
+  </svg>
+  <svg width="200" height="100" viewBox="0 0 200 100">
+    <rect x="0" y="0" width="200" height="100" fill="lightpink"/>
+  </svg>
+</div>
+
+<h3>Flexbox layout</h3>
+<div class="flex-container">
+  <svg width="200" height="100" viewBox="0 0 200 100">
+    <rect x="0" y="0" width="200" height="100" fill="lightblue"/>
+  </svg>
+  <svg width="200" height="100" viewBox="0 0 200 100">
+    <rect x="0" y="0" width="200" height="100" fill="lightpink"/>
+  </svg>
+</div>
+
+</body>
+</html>

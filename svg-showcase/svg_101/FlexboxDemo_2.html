@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .flex-container {
+      display: flex;
+      border: 1px solid gray;
+      /* remove fixed width so it responds to viewport */
+      height: 150px;
+    }
+    .box1 {
+      background: lightblue;
+      flex-grow: 1;       /* expands to fill leftover space */
+      flex-basis: 100px;  /* starting width */
+    }
+    .box2 {
+      background: lightpink;
+      width: 150px;       /* fixed width */
+    }
+  </style>
+</head>
+<body>
+
+<h3>Flex-grow demo (responsive)</h3>
+<div class="flex-container">
+  <div class="box1">flex-grow:1</div>
+  <div class="box2">fixed width</div>
+</div>
+
+</body>
+</html>

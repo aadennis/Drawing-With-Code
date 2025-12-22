@@ -1,0 +1,21 @@
+<div style="display:flex; gap:20px;">
+  <!-- Case 1: viewBox matches width -->
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="400" height="200"
+       viewBox="0 0 400 200"
+       style="border:1px solid gray">
+    <line x1="0" y1="100" x2="400" y2="100"
+          stroke="black" stroke-width="2" />
+    <text x="10" y="20" font-size="16">viewBox scale 1:1 or 400/400</text>
+  </svg>
+
+  <!-- Case 2: viewBox wider than width -->
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="400" height="200"
+       viewBox="0 0 800 200"
+       style="border:1px solid gray">
+    <line x1="0" y1="100" x2="400" y2="100"
+          stroke="black" stroke-width="2" />
+    <text x="10" y="20" font-size="16">viewBox scale 1:2 or 400/800</text>
+  </svg>
+</div>
