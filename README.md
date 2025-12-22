@@ -2,6 +2,11 @@
 
 If you are drawing with code, and then want to see that drawing in a browser, that often means <b>SVG</b>. It does here, anyway.
 
+# But first... Emmet and HTML
+
+Too often, I struggle to remember the `!` and the `html:4` shortcuts, and more.   
+Take a look [here](Docs/emmet_101.md) for Emmet examples / cheats.
+
 ## Drawing with SVG
 
 [MDN: Credit for the tutorial on SVG Paths](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)   
