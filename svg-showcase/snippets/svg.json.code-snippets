@@ -173,5 +173,31 @@
       "</svg>"
     ],
     "description": "SVG root element with width, height, and viewBox"
-  }
+  },
+  "SVG root element2": {
+    "prefix": "svgfull2",
+    "body": [
+      "<svg xmlns=\"http://www.w3.org/2000/svg\"",
+      "     preserveAspectRatio=\"xMidYMid meet\"",
+      "     viewBox=\"0 0 100 100\"",
+      "     style=\"width:100vw; height:100vh; display:block;\"",
+      ">",
+      "",
+      "",
+      "    <!-- Full‑extent outer rectangle (optional stroke/fill) -->",
+      "    <rect",
+      "        x=\"0\" y=\"0.25\"",
+      "        width=\"100\" height=\"99.5\"",
+      "        fill=\"none\"",
+      "        stroke=\"lightblue\"",
+      "        stroke-width=\"2\"",
+      "        vector-effect=\"non-scaling-stroke\"",
+      "    />",
+      "",
+      "    <!-- Your drawing within the box goes here -->",
+      "",
+      "</svg>"
+    ],
+    "description": "SVG root element with width, height, and viewBox"
+  },
 }
