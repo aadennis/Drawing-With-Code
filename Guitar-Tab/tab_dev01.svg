@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     preserveAspectRatio="xMidYMid meet"
+     viewBox="0 0 380 200"
+     style="width:100vw; height:100vh; display:block;"
+>
+   <title>Tablature development - 1 </title>
+   <description>Start with a single line, being 1 line on 1 tab stave</description>
+   <style>
+     .std-line { stroke-width: 1; vector-effect: non-scaling-stroke; stroke: black }
+   </style>
+
+    <!-- Full‑extent outer rectangle (optional stroke/fill) -->
+    <rect
+        x="0" y="0.5"
+        width="380" height="199"
+        fill="none"
+        stroke="lightblue"
+        stroke-width="2"
+        vector-effect="non-scaling-stroke"
+    />
+
+    <line class="std-line" x1="10" y1="100" x2="370" y2="100" />
+
+</svg>
+
