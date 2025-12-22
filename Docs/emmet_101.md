@@ -1,4 +1,4 @@
-## Emmet cheats
+# Emmet cheats
 
 ## Boilerplate
 - `!` → HTML5 skeleton  
