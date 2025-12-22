@@ -26,4 +26,22 @@
 - `input:text` → `<input type="text">`  
 - `input:email` → `<input type="email">`  
 - `a:link` → `<a href="http://"></a>`  
-- `.class
+- `.class` → `<div class="class"></div>`  
+- `#id` → `<div id="id"></div>`
+
+## Classes & IDs
+- `.box` → `<div class="box"></div>`  
+- `#hero` → `<div id="hero"></div>`  
+- `.btn.primary.large` → multi‑class div
+
+## Multipliers
+- `li.item$*4` → numbered classes  
+  - `<li class="item1"></li>` … `<li class="item4"></li>`
+
+## Text
+- `p{Hello}` → `<p>Hello</p>`  
+- `button{Click me}` → `<button>Click me</button>`
+
+## Links & Scripts
+- `link:css` → stylesheet link  
+- `script:src` → script tag with src
