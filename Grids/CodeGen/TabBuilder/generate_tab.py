@@ -4,11 +4,11 @@ def generate_tab_lines():
     y_start = 10
     y_step = 5
 
-    x1 = 10
-    x2 = 370
+    X1 = 10
+    X2 = 370
 
     bars = 5
-    bar_width = (x2 - x1) / bars
+    bar_width = (X2 - X1) / bars
     guides_per_bar = 3
 
     out = []
@@ -24,11 +24,11 @@ def generate_tab_lines():
         # Horizontal lines (6 strings)
         for r in range(1, 7):
             y = y_start + (s * rows + r) * y_step
-            out.append(f' <line class="std-line" x1="{x1}" y1="{y}" x2="{x2}" y2="{y}"/>')
+            out.append(f' <line class="std-line" x1="{X1}" y1="{y}" x2="{X2}" y2="{y}"/>')
 
         # Vertical barlines + internal guides
         for b in range(bars + 1):
-            bx = x1 + b * bar_width
+            bx = X1 + b * bar_width
             out.append(f' <line class="std-line" x1="{bx}" y1="{stave_top}" x2="{bx}" y2="{stave_bottom}"/>')
 
             if b < bars:
