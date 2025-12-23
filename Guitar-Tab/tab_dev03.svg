@@ -21,7 +21,7 @@
     />
 
 <!-- codegen inject start -->
- <line class="std-line" x1="10" y1="10" x2="370" y2="10"/>
+
  <line class="std-line" x1="10" y1="15" x2="370" y2="15"/>
  <line class="std-line" x1="10" y1="20" x2="370" y2="20"/>
  <line class="std-line" x1="10" y1="25" x2="370" y2="25"/>
